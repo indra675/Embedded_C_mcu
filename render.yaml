@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: codeshelf
+    runtime: node
+    buildCommand: echo ok
+    startCommand: node server.js
+    envVars:
+      - key: DATA_DIR
+        value: /var/data   # attach a Render Disk at /var/data so accounts survive redeploys
